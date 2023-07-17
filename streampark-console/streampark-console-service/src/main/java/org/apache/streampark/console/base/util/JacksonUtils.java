@@ -49,6 +49,14 @@ public final class JacksonUtils {
     return MAPPER.readValue(json, clazz);
   }
 
+  public static <T> T readIgnored(String json, Class<T> clazz) {
+    try {
+      return MAPPER.readValue(json, clazz);
+    } catch (JsonProcessingException e) {
+      return null;
+    }
+  }
+
   public static <T> T read(String json, TypeReference<T> typeReference)
       throws JsonProcessingException {
     return MAPPER.readValue(json, typeReference);
@@ -56,5 +64,13 @@ public final class JacksonUtils {
 
   public static String write(Object object) throws JsonProcessingException {
     return MAPPER.writeValueAsString(object);
+  }
+
+  public static String writeIgnored(Object object) {
+    try {
+      return MAPPER.writeValueAsString(object);
+    } catch (JsonProcessingException e) {
+      return null;
+    }
   }
 }
