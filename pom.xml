@@ -154,6 +154,44 @@
         <skipDependencyCheck>true</skipDependencyCheck>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>iqiyi-mbd-views</id>
+            <url>http://jfrog.cloud.qiyi.domain/iqiyi-maven-mcg</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>libs-release</id>
+            <name>libs-release</name>
+            <url>http://jfrog.cloud.qiyi.domain/libs-release</url>
+        </repository>
+        <repository>
+            <snapshots/>
+            <id>libs-snapshot</id>
+            <name>libs-snapshot</name>
+            <url>http://jfrog.cloud.qiyi.domain/libs-snapshot</url>
+        </repository>
+        <repository>
+            <id>iqiyi-maven-cloudservice</id>
+            <name>iqiyi-maven-cloudservice</name>
+            <url>http://jfrog.cloud.qiyi.domain:80/iqiyi-maven-cloudservice</url>
+        </repository>
+        <repository>
+            <id>mvnrepository-maven-cloudservice</id>
+            <name>mvnrepository-maven-cloudservice</name>
+            <url>https://build.shibboleth.net/maven/releases</url>
+        </repository>
+    </repositories>
+
     <dependencyManagement>
 
         <dependencies>
