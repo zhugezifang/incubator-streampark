@@ -45,7 +45,7 @@ springdoc:
 
 spring:
   profiles:
-    active: h2 #[h2,pgsql,mysql]
+    active: mysql #[h2,pgsql,mysql]
     # Please uncomment the below config if enable sso
     # include: sso
   application.name: StreamPark
