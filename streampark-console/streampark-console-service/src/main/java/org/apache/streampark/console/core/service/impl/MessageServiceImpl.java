@@ -55,7 +55,7 @@ public class MessageServiceImpl extends ServiceImpl<MessageMapper, Message>
         new LambdaQueryWrapper<Message>()
             .eq(Message::getIsRead, false)
             .orderByDesc(Message::getCreateTime)
-            .eq(Message::getType, type);
+            .eq(Message::getType, noticeTypeEnum);
     return this.baseMapper.selectPage(page, queryWrapper);
   }
 }

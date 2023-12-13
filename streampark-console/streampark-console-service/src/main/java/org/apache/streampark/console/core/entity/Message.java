@@ -40,7 +40,7 @@ public class Message {
   private String title;
 
   /** 1) build failure report 2) task monitoring exception */
-  private Integer type;
+  private NoticeTypeEnum type;
 
   private String context;
 
