@@ -49,7 +49,7 @@ public class MessageServiceImpl extends ServiceImpl<MessageMapper, Message>
   @Override
   public IPage<Message> getUnReadPage(NoticeTypeEnum noticeTypeEnum, RestRequest request) {
     int type = noticeTypeEnum.get();
-    log.info("type:{}", type);
+    log.info("type1:{}", type);
     Page<Message> page = new MybatisPager<Message>().getDefaultPage(request);
     LambdaQueryWrapper<Message> queryWrapper =
         new LambdaQueryWrapper<Message>()

@@ -54,7 +54,7 @@ public class Message {
     this.appId = appId;
     this.title = title;
     this.context = context;
-    this.type = noticeTypeEnum.get();
+    this.type = noticeTypeEnum;
     this.createTime = new Date();
     this.isRead = false;
   }
